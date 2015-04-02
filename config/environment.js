@@ -4,6 +4,8 @@ module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'greek',
     environment: environment,
+    contentSecurityPolicy: { 'connect-src': "'self' wss://*.firebaseio.com" },
+    firebase: 'https://blinding-fire-3308.firebaseio.com/',
     baseURL: '/',
     locationType: 'auto',
     EmberENV: {
