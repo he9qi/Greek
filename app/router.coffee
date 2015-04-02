@@ -3,6 +3,7 @@
 
 Router = Ember.Router.extend(location: config.locationType)
 Router.map ->
-  @resource 'classes'
+  @resource 'tutors', path: '/tutors'
+  @resource 'tutor', path: '/tutors/:tutor_id'
 
 `export default Router`
