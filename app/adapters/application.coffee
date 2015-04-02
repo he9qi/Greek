@@ -3,6 +3,6 @@
 
 ApplicationAdapter = DS.ActiveModelAdapter.extend
   # host: config.mipsy.proxyHost
-  namespace: "api/users"
+  namespace: "api"
 
 `export default ApplicationAdapter`

@@ -1,5 +1,7 @@
 <div class="container">
-  <ul class="tutors-list">
-    
+  <ul class="tutors">
+    {{#each tutor in tutors}}
+      <li class="tutor">{{tutor.name}}</li>
+    {{/each}}
   </ul>
 </div>
