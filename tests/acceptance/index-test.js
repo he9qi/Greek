@@ -19,5 +19,6 @@ test('index', function(assert) {
 
   andThen(function() {
     assert.equal(find('nav').length, 1, 'The page shows navbar');
+    assert.equal(find('nav a.navbar-brand').length, 1, 'The page shows brand');
   });
 });
