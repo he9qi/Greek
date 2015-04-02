@@ -11,7 +11,7 @@ test('Tutor is valid and has name', function (assert) {
   var store = this.store();
   var tutor = this.subject({
     name: 'John Carr',
-    intro: "Hi, I'm John. I'm from Cape Town, a beautiful city in South Africa. I've also lived in Florida, New York, London.",
+    info: "Hi, I'm John. I'm from Cape Town, a beautiful city in South Africa. I've also lived in Florida, New York, London.",
     avatar_url: "http://avatar.png"
   });
 

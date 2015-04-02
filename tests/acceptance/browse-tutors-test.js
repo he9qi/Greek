@@ -19,13 +19,13 @@ module('BrowseTutors', {
       {
         id: 2,
         name: 'Wile E. Coyote',
-        intro: "Hi, I'm John. I'm from Cape Town, a beautiful city in South Africa. I've also lived in Florida, New York, London",
+        intro: "Hi, I'm John. I'm from Cape Town",
         avatar_url: "https://avatars0.githubusercontent.com/u/29342?v=3&s=40"
       },
       {
         id: 3,
         name: 'Yosemite Sam',
-        intro: "Hi, I'm John. I'm from Cape Town, a beautiful city in South Africa. I've also lived in Florida, New York, London",
+        intro: "Hi, I'm John. I'm from Cape Town",
         avatar_url: "https://avatars0.githubusercontent.com/u/29342?v=3&s=40"
       }
     ];
@@ -52,4 +52,15 @@ test('tutors', function(assert) {
   andThen(function() {
     assert.equal(find('ul.tutors li').length, 3, 'The page shows 3 tutors');
   });
+
+});
+
+test('tutor', function(assert) {
+  visit('/tutors');
+  click('ul.tutors li .avatar a');
+
+  andThen(function() {
+    assert.equal(find('section.tutor').length, 1, 'Go to tutor profile page');
+  });
+
 });

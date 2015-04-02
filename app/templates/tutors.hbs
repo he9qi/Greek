@@ -1,7 +1,23 @@
 <div class="container">
-  <ul class="tutors">
+  <ul class="tutors list-unstyled">
     {{#each tutor in tutors}}
-      <li class="tutor">{{tutor.name}}</li>
+      <li class="tutor">
+        <div class="media">
+          <div class="media-left avatar">
+            {{#link-to 'tutor' tutor}}
+              <img src="{{unbound tutor.avatar_url}}" class="img-rounded"/>
+            {{/link-to}}
+          </div>
+          <div class="media-body">
+            <h4 class="media-heading">
+              {{#link-to 'tutor' tutor}}
+                {{tutor.name}}
+              {{/link-to}}
+            </h4>
+            {{tutor.info}}
+          </div>
+        </div>
+      </li>
     {{/each}}
   </ul>
 </div>
